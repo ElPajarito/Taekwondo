@@ -1,0 +1,73 @@
+# ---------------------
+# Site Configuration
+# ---------------------
+site_name: Taekwondo Cookbook
+site_url: https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/  # 👈 *** EDIT THIS ***
+site_author: Your Name
+site_description: A competitive Taekwondo sparring "hack-along" and cookbook.
+
+# Copyright
+copyright: Copyright &copy; 2025 Your Name
+
+# ---------------------
+# Theme (This makes it beautiful)
+# ---------------------
+theme:
+  name: material
+  logo: assets/logo.png  # (Optional: if you have a logo)
+  favicon: assets/favicon.png # (Optional: if you have a favicon)
+  
+  # Features
+  features:
+    - navigation.instant        # Makes site feel super fast
+    - navigation.tabs           # Adds top-level tabs
+    - navigation.sections       # Expands sections in the sidebar
+    - header.autohide           # Hides header on scroll
+    - search.suggest            # Search auto-completion
+    - search.highlight          # Highlights search terms
+
+  # Color Palette (Dark/Light mode)
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# ---------------------
+# Navigation (This makes it practical)
+# ---------------------
+# This controls the order and titles in your sidebar.
+nav:
+  - 'Home': 'index.md'
+  - 'Techniques':
+    - 'Overview': '01_techniques/index.md'
+    - 'Footwork': '01_techniques/01_footwork.md'
+    - 'Kicks': '01_techniques/02_kicks.md'
+  - 'Recipes (Combos)':
+    - 'Overview': '02_recipes/index.md'
+    - 'Cut Kick Setup': '02_recipes/cut-kick-setup.md'
+    - 'Blitz vs. Runner': '02_recipes/blitz-vs-runner.md'
+  - 'Scenarios':
+    - 'vs. Aggressive': '03_scenarios/vs-aggressive.md'
+    - 'vs. Taller Opponent': '03_scenarios/vs-taller.md'
+
+# ---------------------
+# Extensions (Extra features)
+# ---------------------
+markdown_extensions:
+  - admonition  # 👈 This lets you create recipe boxes (!!! note)
+  - pymdownx.details
+  - pymdownx.superfences
